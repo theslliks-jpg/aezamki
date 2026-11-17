@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>aezakmi — asset &amp; patch delivery for indie game studios</title>
+<meta name="description" content="Aezakmi delivers game builds, patches and media for small studios: fast static edge, resumable downloads, zero-drama rollouts.">
+<meta name="theme-color" content="#0b0d10">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="21" height="21" rx="5" stroke="currentColor" stroke-width="1.5"/><path d="M7 8l4 4-4 4" stroke="#c6ff3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 16h4" stroke="#c6ff3d" stroke-width="2" stroke-linecap="round"/></svg>
+      aezakmi
+    </a>
+    <nav>
+      <a href="#platform">Platform</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#access">Access</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="prompt">&gt; accept <b>aezakmi</b><span class="cursor"></span></p>
+      <h1>Ship patches. <em>Skip the queue.</em></h1>
+      <p class="lede">Static and media delivery built for small game studios. Push a build, get a resumable download link and a clean rollout — no storefront approval, no surprise egress bill.</p>
+      <div class="cta">
+        <a class="btn primary" href="#access">Request access</a>
+        <a class="btn" href="#pipeline">How it works</a>
+        <span class="note">invite-only · 2026 cohort full</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><div class="k">Uptime, 90d</div><div class="v">99.98%</div></div>
+      <div class="stat"><div class="k">Median TTFB</div><div class="v">38 ms</div></div>
+      <div class="stat"><div class="k">Largest build</div><div class="v">84 GB</div></div>
+      <div class="stat"><div class="k">Studios</div><div class="v">23</div></div>
+    </div>
+  </div>
+
+  <section id="platform">
+    <div class="wrap">
+      <p class="eyebrow">Platform</p>
+      <h2>Everything between your build server and the player.</h2>
+      <p class="sub">Three boring things, done properly. We are deliberately small: no marketplace, no launcher, no ads.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="ic">/static</div>
+          <h3>Asset edge</h3>
+          <p>Textures, bundles and web builds served from hot storage with immutable URLs and long-lived caching.</p>
+        </div>
+        <div class="card">
+          <div class="ic">/patch</div>
+          <h3>Delta patches</h3>
+          <p>Binary diffs between versions, chunked and resumable. Players download what changed, not the whole game.</p>
+        </div>
+        <div class="card">
+          <div class="ic">/media</div>
+          <h3>Trailers &amp; devlogs</h3>
+          <p>Adaptive video segments for press kits and store pages, with signed links for embargoed material.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pipeline">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Pipeline</p>
+        <h2>One command from CI to every player.</h2>
+        <ul class="checks">
+          <li><b>Staged rollouts</b> — 5%, 25%, everyone. Roll back in seconds.</li>
+          <li><b>Content-addressed</b> — identical chunks are stored once.</li>
+          <li><b>Signed manifests</b> — clients verify every file before install.</li>
+          <li><b>Plain HTTPS</b> — works behind any firewall, no custom ports.</li>
+        </ul>
+      </div>
+      <div class="term" aria-label="Example CLI session">
+<span class="c"># push a new build</span><br>
+$ ak push ./build --channel beta<br>
+<span class="g">✓</span> 1,284 chunks · 312 new · 2.1 GB uploaded<br>
+<span class="g">✓</span> manifest signed <span class="t">v0.9.14-beta</span><br>
+<br>
+<span class="c"># roll it out</span><br>
+$ ak release v0.9.14-beta --to 25%<br>
+<span class="g">✓</span> live on channel <span class="t">beta</span> · 25% of players<br>
+<br>
+<span class="c"># something broke? undo.</span><br>
+$ ak rollback beta<br>
+<span class="g">✓</span> reverted to <span class="t">v0.9.13</span> in 4s
+      </div>
+    </div>
+  </section>
+
+  <section id="access">
+    <div class="wrap">
+      <p class="eyebrow">Access</p>
+      <h2>We onboard a handful of studios at a time.</h2>
+      <p class="sub">The 2026 cohort is full. New teams are added when capacity frees up; we reach out to studios directly rather than taking public sign-ups.</p>
+      <div class="status"><span class="dot"></span>All systems operational</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="y">2026</span> Aezakmi Labs</span>
+    <nav>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </nav>
+  </div>
+</footer>
+<script src="/egg.js" defer></script>
+</body>
+</html>
